@@ -257,4 +257,25 @@
                     </articulos_periodico>
                 </seccion_periodico>
 
+                <!-- internacional -->
+                <seccion_periodico tipo_seccion="internacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico>Indice</indice_periodico>
+        </periodico>
+
 </biblioteca>
