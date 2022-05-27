@@ -21,4 +21,57 @@
         </xs:complexType>
     </xs:element>
 
+     <!-- Libro -->
+     <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo_libro" type="xs:string" />
+                <xs:element ref="capitulos_libro" />
+                <xs:element name="indice_libro" type="xs:string" />
+                <xs:element name="sinopsis_libro" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="id">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[L][0-9]{4}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="tipo_clase">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="novela"></xs:enumeration>
+                        <xs:enumeration value="infantil"></xs:enumeration>
+                        <xs:enumeration value="didactico"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="num_paginas_libro" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="capitulos_libro">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="capitulo_libro" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="capitulo_libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo_capitulo" type="xs:string" />
+                <xs:element ref="contenido_capitulo" />
+            </xs:sequence>
+            <xs:attribute name="num_paginas_capitulo" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contenido_capitulo">
+        <xs:complexType>
+            <xs:attribute name="enlace_capitulo" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
