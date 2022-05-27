@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+
+<!-- 
+**************************************** 
+  Definición de elementos y atributos 
+**************************************** 
+-->
+<!-- Biblioteca -->
+<!ELEMENT biblioteca (documentos)>
+<!-- Documentos -->
+<!ELEMENT documentos (libro*, revista*, periodico*)>
+<!-- 
+++++++++++++++++++++
+	   Libro 
+++++++++++++++++++++ 
+-->
+<!ELEMENT libro (titulo_libro, capitulos_libro, indice_libro, sinopsis_libro)>
+<!-- Atributos Libro-->
+<!ATTLIST libro
+	id ID #REQUIRED
+	tipo_clase (novela | infantil | didactico) #REQUIRED
+	num_paginas_libro CDATA #REQUIRED
+>
+<!-- titulo_libro -->
+<!ELEMENT titulo_libro (#PCDATA)>
+<!-- capitulos_libro -->
+<!ELEMENT capitulos_libro (capitulo_libro+)>
+<!-- capitulo_libro -->
+<!ELEMENT capitulo_libro (titulo_capitulo, contenido_capitulo)+>
+<!ATTLIST capitulo_libro num_paginas_capitulo CDATA #REQUIRED>
+ <!-- Atributo -->
+<!-- titulo_capitulo -->
+<!ELEMENT titulo_capitulo (#PCDATA)>
+<!-- contenido_capitulo -->
+<!ELEMENT contenido_capitulo (#PCDATA)>
+<!ATTLIST contenido_capitulo enlace_capitulo CDATA #REQUIRED>
+ <!-- Atributo -->
+<!-- indice_libro -->
+<!ELEMENT indice_libro (#PCDATA)>
+<!-- sinopsis_libro -->
+<!ELEMENT sinopsis_libro (#PCDATA)>
+<!-- 
+++++++++++++++++++++
+	  Revista 
+++++++++++++++++++++ 
+-->
+<!ELEMENT revista (titulo_revista, num_revista, indice_revista, secciones_revista)>
+<!-- Atributos Revista-->
+<!ATTLIST revista
+	id ID #REQUIRED
+	tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED
+	num_paginas_revista CDATA #REQUIRED
+>
+<!-- titulo_revista -->
+<!ELEMENT titulo_revista (#PCDATA)>
+<!-- num_revista -->
+<!ELEMENT num_revista (#PCDATA)>
+<!-- indice_revista -->
+<!ELEMENT indice_revista (#PCDATA)>
+<!-- secciones_revista -->
+<!ELEMENT secciones_revista (seccion_revista+)>
+<!-- seccion_revista -->
+<!ELEMENT seccion_revista (contenido_revista+)>
+<!ATTLIST seccion_revista num_paginas_seccion CDATA #REQUIRED>
+<!-- contenido_revista -->
+<!ELEMENT contenido_revista (#PCDATA)>
+<!ATTLIST contenido_revista enlace_contenido CDATA #REQUIRED>
+<!-- 
+++++++++++++++++++++
+	  Periodico 
+++++++++++++++++++++ 
+-->
+<!ELEMENT periodico (secciones_periodico, indice_periodico)>
+<!-- Atributos Periodico -->
+<!ATTLIST periodico
+	id ID #REQUIRED
+	tipo_clase (nacional | internacional) #REQUIRED
+	fecha_publicacion CDATA #REQUIRED
+>
+<!-- secciones_periodico -->
+<!ELEMENT secciones_periodico (seccion_periodico+)>
+<!-- seccion_periodico -->
+<!ELEMENT seccion_periodico (articulos_periodico)>
+<!ATTLIST seccion_periodico tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+<!-- articulos_periodico -->
+<!ELEMENT articulos_periodico (art_periodico+)>
+<!-- art_periodico -->
+<!ELEMENT art_periodico (contenido_art+)>
+<!ATTLIST art_periodico autor CDATA #REQUIRED>
+<!-- contenido_art -->
+<!ELEMENT contenido_art (#PCDATA)>
+<!ATTLIST contenido_art enlace_art CDATA #REQUIRED>
+<!-- indice_periodico -->
+<!ELEMENT indice_periodico (#PCDATA)>
+]>
+
+<!-- ******************************************
+                    Biblioteca  
+     ****************************************** -->
+
+<!-- Biblioteca -->
+<biblioteca>
+	<!-- Documentos -->
+    <documentos>
+        <!-- *************** Libros *************** -->
+
+        <!-- didactico -->
+        <libro id="L0001" tipo_clase="didactico" num_paginas_libro="27">
+            <titulo_libro>Érase una vez el cuerpo humano: La vista</titulo_libro>
+            <capitulos_libro>
+                <capitulo_libro num_paginas_capitulo="10">
+                    <titulo_capitulo>Título capitulo 1</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link"></contenido_capitulo>
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="10">
+                    <titulo_capitulo>Título capitulo 2</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="7">
+                    <titulo_capitulo>Título capitulo 3</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+            </capitulos_libro>
+            <indice_libro>Indice</indice_libro>
+            <sinopsis_libro>
+				Érase una vez... el cuerpo humano es una serie hispano-francesa de dibujos animados infantiles con vocación didáctica y divulgativa. 
+				En su producción colaboraron France 3, Canal+, la Société de radio-Canadá y Radio-televisión Española entre otras. 
+				En ella se explican, de forma simple y amena, diferentes aspectos sobre anatomía, enfermedades o, por ejemplo, cómo se oxigena la sangre, cómo cicatriza una herida. 
+				De la misma forma, se explica la importancia de determinados hábitos relacionados con la salud como cepillarse los dientes, hacer deporte u otros. 
+				La explicación se realiza a través de las aventuras de distintos personajes que representan los distintos órganos, células.
+				Pertenece al conjunto de series para la televisión Érase una vez.... Fue creada por Albert Barillé en los estudios Procidis y difundida por Canal+ y France 3 a partir de 1987. 
+				También se ha editado en fascículos coleccionables más de 15 veces.
+			</sinopsis_libro>
+
+        </libro>
+
+        <!-- novela -->
+        <libro id="L0002" tipo_clase="novela" num_paginas_libro="250">
+            <titulo_libro>Cien años de soledad</titulo_libro>
+            <capitulos_libro>
+                <capitulo_libro num_paginas_capitulo="30">
+                    <titulo_capitulo>Título capitulo 1</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="35">
+                    <titulo_capitulo>Título capitulo 2</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="26">
+                    <titulo_capitulo>Título capitulo 3</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+            </capitulos_libro>
+            <indice_libro>Indice</indice_libro>
+            <sinopsis_libro>
+			La novela del escritor colombiano que narra las vicisitudes de la familia Buendía a lo largo de siete generaciones en el ficticio pueblo de Macondo es considerado por muchos la mejor novela de todos los tiempos. 
+			Referente del boom latinoamericano y abanderado del realismo mágico, esta obra, publicada en 1967, para muchos debería encabezar el ranking.
+			</sinopsis_libro>
+        </libro>
+
+        <!-- infantil -->
+        <libro id="L0003" tipo_clase="infantil" num_paginas_libro="30">
+            <titulo_libro>Osito Tito</titulo_libro>
+            <capitulos_libro>
+                <capitulo_libro num_paginas_capitulo="5">
+                    <titulo_capitulo>Título capitulo 1</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="35">
+                    <titulo_capitulo>Título capitulo 2</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="26">
+                    <titulo_capitulo>Título capitulo 3</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+            </capitulos_libro>
+            <indice_libro>Indice</indice_libro>
+            <sinopsis_libro>Sinopsis</sinopsis_libro>
+        </libro>
+
+        <!-- *************** Revistas *************** -->
+
+        <!-- coches -->
+        <revista id="R0001" tipo_clase="coches" num_paginas_revista="76">
+            <titulo_revista>MQC</titulo_revista>
+            <num_revista>1</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="40">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="6">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+
+        </revista>
+
+        <!-- informatica -->
+        <revista id="R0002" tipo_clase="informatica" num_paginas_revista="90">
+            <titulo_revista>PC actual</titulo_revista>
+            <num_revista>Nº115</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+
+        <!-- corazon -->
+        <revista id="R0003" tipo_clase="corazon" num_paginas_revista="60">
+            <titulo_revista>Lecturas</titulo_revista>
+            <num_revista>3624</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="20">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="20">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="20">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+
+        <!-- investigacion -->
+        <revista id="R0004" tipo_clase="investigacion" num_paginas_revista="150">
+            <titulo_revista>Investigación y ciencia</titulo_revista>
+            <num_revista>Nº405</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="50">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="50">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="50">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+
+        <!-- otras -->
+        <revista id="R0005" tipo_clase="otras" num_paginas_revista="150">
+            <titulo_revista>Título revista</titulo_revista>
+            <num_revista>1</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="5">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="8">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="3">
+                    <contenido_revista enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+
+        <!-- *************** Periódicos *************** -->
+
+        <!-- internacional -->
+        <periodico id="P0001" tipo_clase="internacional" fecha_publicacion="24/05/2022">
+
+            <secciones_periodico>
+
+                <!-- economia -->
+                <seccion_periodico tipo_seccion="economica">
+                    <articulos_periodico>
+                        <art_periodico autor="Andreu Missé">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Javier Ruiz">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Iñigo de Barrón">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Estela Santos">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- opinion -->
+                <seccion_periodico tipo_seccion="opinion">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- deportes -->
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- nacional -->
+                <seccion_periodico tipo_seccion="nacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- internacional -->
+                <seccion_periodico tipo_seccion="internacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico>Indice</indice_periodico>
+        </periodico>
+
+        <!-- nacional -->
+        <periodico id="P0002" tipo_clase="nacional" fecha_publicacion="25/05/2022">
+            <secciones_periodico>
+
+                <!-- economia -->
+                <seccion_periodico tipo_seccion="economica">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- opinion -->
+                <seccion_periodico tipo_seccion="opinion">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- deportes -->
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- nacional -->
+                <seccion_periodico tipo_seccion="nacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- internacional -->
+                <seccion_periodico tipo_seccion="internacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico>Indice</indice_periodico>
+        </periodico>
+    </documentos>
+</biblioteca>
