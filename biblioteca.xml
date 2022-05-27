@@ -104,7 +104,24 @@
                     <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
             </secciones_revista>
+        </revista>
 
+        <!-- informatica -->
+        <revista id="R0002" tipo_clase="informatica" num_paginas_revista="90">
+            <titulo_revista>PC actual</titulo_revista>
+            <num_revista>Nº115</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="30">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
         </revista>
 
 </biblioteca>
