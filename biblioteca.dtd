@@ -7,7 +7,7 @@
 <!ELEMENT biblioteca (documentos)>
 <!-- Documentos -->
 <!ELEMENT documentos (libro*, revista*, periodico*)>
-!-- 
+<!-- 
 ++++++++++++++++++++
 	   Libro 
 ++++++++++++++++++++ 
@@ -63,3 +63,30 @@
 <!-- contenido_revista -->
 <!ELEMENT contenido_seccion (#PCDATA)>
 <!ATTLIST contenido_seccion enlace_contenido CDATA #REQUIRED>
+<!-- 
+++++++++++++++++++++
+	  Periodico 
+++++++++++++++++++++ 
+-->
+<!ELEMENT periodico (secciones_periodico, indice_periodico)>
+<!-- Atributos Periodico -->
+<!ATTLIST periodico
+	id ID #REQUIRED
+	tipo_clase (nacional | internacional) #REQUIRED
+	fecha_publicacion CDATA #REQUIRED
+>
+<!-- secciones_periodico -->
+<!ELEMENT secciones_periodico (seccion_periodico+)>
+<!-- seccion_periodico -->
+<!ELEMENT seccion_periodico (articulos_periodico)>
+<!ATTLIST seccion_periodico tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+<!-- articulos_periodico -->
+<!ELEMENT articulos_periodico (art_periodico+)>
+<!-- art_periodico -->
+<!ELEMENT art_periodico (contenido_art+)>
+<!ATTLIST art_periodico autor CDATA #REQUIRED>
+<!-- contenido_art -->
+<!ELEMENT contenido_art (#PCDATA)>
+<!ATTLIST contenido_art enlace_art CDATA #REQUIRED>
+<!-- indice_periodico -->
+<!ELEMENT indice_periodico (#PCDATA)>
