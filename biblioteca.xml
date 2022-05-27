@@ -278,4 +278,102 @@
             <indice_periodico>Indice</indice_periodico>
         </periodico>
 
+        <!-- nacional -->
+        <periodico id="P0002" tipo_clase="nacional" fecha_publicacion="25/05/2022">
+            <secciones_periodico>
+
+                <!-- economia -->
+                <seccion_periodico tipo_seccion="economica">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- opinion -->
+                <seccion_periodico tipo_seccion="opinion">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- deportes -->
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- nacional -->
+                <seccion_periodico tipo_seccion="nacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
+                <!-- internacional -->
+                <seccion_periodico tipo_seccion="internacional">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico>Indice</indice_periodico>
+        </periodico>
+    </documentos>
+
 </biblioteca>
