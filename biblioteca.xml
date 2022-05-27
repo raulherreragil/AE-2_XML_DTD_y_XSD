@@ -203,4 +203,22 @@
                     </articulos_periodico>
                 </seccion_periodico>
 
+                <!-- opinion -->
+                <seccion_periodico tipo_seccion="opinion">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
 </biblioteca>
