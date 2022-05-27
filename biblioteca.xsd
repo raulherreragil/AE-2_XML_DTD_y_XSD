@@ -74,4 +74,58 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Revista -->
+    <xs:element name="revista">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo_revista" type="xs:string" />
+                <xs:element name="num_revista" type="xs:string" />
+                <xs:element name="indice_revista" type="xs:string" />
+                <xs:element ref="secciones_revista" />
+            </xs:sequence>
+            <xs:attribute name="id">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[R][0-9]{4}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="tipo_clase">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="informatica"></xs:enumeration>
+                        <xs:enumeration value="corazon"></xs:enumeration>
+                        <xs:enumeration value="coches"></xs:enumeration>
+                        <xs:enumeration value="investigacion"></xs:enumeration>
+                        <xs:enumeration value="otras"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="num_paginas_revista" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="secciones_revista">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="seccion_revista" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="seccion_revista">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="contenido_seccion" />
+            </xs:sequence>
+            <xs:attribute name="num_paginas_seccion" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contenido_seccion">
+        <xs:complexType>
+            <xs:attribute name="enlace_contenido" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
