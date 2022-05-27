@@ -32,7 +32,6 @@
 				Pertenece al conjunto de series para la televisión Érase una vez.... Fue creada por Albert Barillé en los estudios Procidis y difundida por Canal+ y France 3 a partir de 1987. 
 				También se ha editado en fascículos coleccionables más de 15 veces.
 			</sinopsis_libro>
-
         </libro>
 
         <!-- novela -->
@@ -89,16 +88,15 @@
             <indice_revista>Indice revista</indice_revista>
             <secciones_revista>
                 <seccion_revista num_paginas_seccion="30">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="40">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="6">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
             </secciones_revista>
-
         </revista>
 
         <!-- informatica -->
@@ -108,13 +106,13 @@
             <indice_revista>Indice revista</indice_revista>
             <secciones_revista>
                 <seccion_revista num_paginas_seccion="30">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="30">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="30">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
             </secciones_revista>
         </revista>
@@ -126,13 +124,13 @@
             <indice_revista>Indice revista</indice_revista>
             <secciones_revista>
                 <seccion_revista num_paginas_seccion="20">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="20">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="20">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
             </secciones_revista>
         </revista>
@@ -144,13 +142,13 @@
             <indice_revista>Indice revista</indice_revista>
             <secciones_revista>
                 <seccion_revista num_paginas_seccion="50">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="50">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="50">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
             </secciones_revista>
         </revista>
@@ -162,13 +160,13 @@
             <indice_revista>Indice revista</indice_revista>
             <secciones_revista>
                 <seccion_revista num_paginas_seccion="5">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="8">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
                 <seccion_revista num_paginas_seccion="3">
-                    <contenido_revista enlace_contenido="link" />
+                    <contenido_seccion enlace_contenido="link" />
                 </seccion_revista>
             </secciones_revista>
         </revista>
@@ -216,8 +214,8 @@
                     </articulos_periodico>
                 </seccion_periodico>
 
-                <!-- deportes -->
-                <seccion_periodico tipo_seccion="deportes">
+                 <!-- deportes -->
+                 <seccion_periodico tipo_seccion="deportes">
                     <articulos_periodico>
                         <art_periodico autor="Nombre del autor">
                             <contenido_art enlace_art="link" />
@@ -370,4 +368,5 @@
             <indice_periodico>Indice</indice_periodico>
         </periodico>
     </documentos>
+
 </biblioteca>
