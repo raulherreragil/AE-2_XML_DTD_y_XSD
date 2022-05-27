@@ -7,3 +7,34 @@
 <!ELEMENT biblioteca (documentos)>
 <!-- Documentos -->
 <!ELEMENT documentos (libro*, revista*, periodico*)>
+!-- 
+++++++++++++++++++++
+	   Libro 
+++++++++++++++++++++ 
+-->
+<!ELEMENT libro (titulo_libro, capitulos_libro, indice_libro, sinopsis_libro)>
+<!-- Atributos Libro-->
+<!ATTLIST libro
+    id ID #REQUIRED
+    tipo_clase (novela | infantil | didactico) #REQUIRED
+    num_paginas_libro CDATA #REQUIRED
+>
+<!-- titulo_libro -->
+<!ELEMENT titulo_libro (#PCDATA)>
+<!-- capitulos_libro -->
+<!ELEMENT capitulos_libro (capitulo_libro+)>
+<!-- capitulo_libro -->
+<!ELEMENT capitulo_libro (titulo_capitulo, contenido_capitulo)+>
+<!ATTLIST capitulo_libro num_paginas_capitulo CDATA #REQUIRED>
+<!-- Atributo -->
+<!-- titulo_capitulo -->
+<!ELEMENT titulo_capitulo (#PCDATA)>
+<!-- contenido_capitulo -->
+<!ELEMENT contenido_capitulo (#PCDATA)>
+<!ATTLIST contenido_capitulo enlace_capitulo CDATA #REQUIRED>
+<!-- Atributo -->
+<!-- indice_libro -->
+<!ELEMENT indice_libro (#PCDATA)>
+<!-- sinopsis_libro -->
+<!ELEMENT sinopsis_libro (#PCDATA)>
+<!-- -->
