@@ -221,4 +221,22 @@
                     </articulos_periodico>
                 </seccion_periodico>
 
+                 <!-- deportes -->
+                 <seccion_periodico tipo_seccion="deportes">
+                    <articulos_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Nombre del autor">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
 </biblioteca>
