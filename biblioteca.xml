@@ -39,7 +39,30 @@
 				Pertenece al conjunto de series para la televisión Érase una vez.... Fue creada por Albert Barillé en los estudios Procidis y difundida por Canal+ y France 3 a partir de 1987. 
 				También se ha editado en fascículos coleccionables más de 15 veces.
 			</sinopsis_libro>
+        </libro>
 
+        <!-- novela -->
+        <libro id="L0002" tipo_clase="novela" num_paginas_libro="250">
+            <titulo_libro>Cien años de soledad</titulo_libro>
+            <capitulos_libro>
+                <capitulo_libro num_paginas_capitulo="30">
+                    <titulo_capitulo>Título capitulo 1</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="35">
+                    <titulo_capitulo>Título capitulo 2</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="26">
+                    <titulo_capitulo>Título capitulo 3</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+            </capitulos_libro>
+            <indice_libro>Indice</indice_libro>
+            <sinopsis_libro>
+			La novela del escritor colombiano que narra las vicisitudes de la familia Buendía a lo largo de siete generaciones en el ficticio pueblo de Macondo es considerado por muchos la mejor novela de todos los tiempos. 
+			Referente del boom latinoamericano y abanderado del realismo mágico, esta obra, publicada en 1967, para muchos debería encabezar el ranking.
+			</sinopsis_libro>
         </libro>
 
 </biblioteca>
