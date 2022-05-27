@@ -124,4 +124,22 @@
             </secciones_revista>
         </revista>
 
+        <!-- corazon -->
+        <revista id="R0003" tipo_clase="corazon" num_paginas_revista="60">
+            <titulo_revista>Lecturas</titulo_revista>
+            <num_revista>3624</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="20">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="20">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="20">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+
 </biblioteca>
