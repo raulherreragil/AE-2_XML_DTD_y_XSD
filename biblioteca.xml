@@ -178,4 +178,29 @@
             </secciones_revista>
         </revista>
 
+        <!-- *************** Periódicos *************** -->
+
+        <!-- internacional -->
+        <periodico id="P0001" tipo_clase="internacional" fecha_publicacion="24/05/2022">
+
+            <secciones_periodico>
+
+                <!-- economia -->
+                <seccion_periodico tipo_seccion="economica">
+                    <articulos_periodico>
+                        <art_periodico autor="Andreu Missé">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Javier Ruiz">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Iñigo de Barrón">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                        <art_periodico autor="Estela Santos">
+                            <contenido_art enlace_art="link" />
+                        </art_periodico>
+                    </articulos_periodico>
+                </seccion_periodico>
+
 </biblioteca>
