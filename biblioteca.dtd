@@ -26,7 +26,7 @@
 <!-- capitulo_libro -->
 <!ELEMENT capitulo_libro (titulo_capitulo, contenido_capitulo)+>
 <!ATTLIST capitulo_libro num_paginas_capitulo CDATA #REQUIRED>
-<!-- Atributo -->
+
 <!-- titulo_capitulo -->
 <!ELEMENT titulo_capitulo (#PCDATA)>
 <!-- contenido_capitulo -->
@@ -37,4 +37,29 @@
 <!ELEMENT indice_libro (#PCDATA)>
 <!-- sinopsis_libro -->
 <!ELEMENT sinopsis_libro (#PCDATA)>
-<!-- -->
+<!-- 
+++++++++++++++++++++
+	  Revista 
+++++++++++++++++++++ 
+-->
+<!ELEMENT revista (titulo_revista, num_revista, indice_revista, secciones_revista)>
+<!-- Atributos Revista-->
+<!ATTLIST revista
+    id ID #REQUIRED
+    tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED
+    num_paginas_revista CDATA #REQUIRED
+>
+<!-- titulo_revista -->
+<!ELEMENT titulo_revista (#PCDATA)>
+<!-- num_revista -->
+<!ELEMENT num_revista (#PCDATA)>
+<!-- indice_revista -->
+<!ELEMENT indice_revista (#PCDATA)>
+<!-- secciones_revista -->
+<!ELEMENT secciones_revista (seccion_revista+)>
+<!-- seccion_revista -->
+<!ELEMENT seccion_revista (contenido_seccion+)>
+<!ATTLIST seccion_revista num_paginas_seccion CDATA #REQUIRED>
+<!-- contenido_revista -->
+<!ELEMENT contenido_seccion (#PCDATA)>
+<!ATTLIST contenido_seccion enlace_contenido CDATA #REQUIRED>
