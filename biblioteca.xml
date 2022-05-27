@@ -65,4 +65,25 @@
 			</sinopsis_libro>
         </libro>
 
+        <!-- infantil -->
+        <libro id="L0003" tipo_clase="infantil" num_paginas_libro="30">
+            <titulo_libro>Osito Tito</titulo_libro>
+            <capitulos_libro>
+                <capitulo_libro num_paginas_capitulo="5">
+                    <titulo_capitulo>Título capitulo 1</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="35">
+                    <titulo_capitulo>Título capitulo 2</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+                <capitulo_libro num_paginas_capitulo="26">
+                    <titulo_capitulo>Título capitulo 3</titulo_capitulo>
+                    <contenido_capitulo enlace_capitulo="link" />
+                </capitulo_libro>
+            </capitulos_libro>
+            <indice_libro>Indice</indice_libro>
+            <sinopsis_libro>Sinopsis</sinopsis_libro>
+        </libro>
+
 </biblioteca>
