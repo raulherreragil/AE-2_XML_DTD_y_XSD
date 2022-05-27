@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+ <!-- Biblioteca -->
+ <xs:element name="biblioteca">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="documentos" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
