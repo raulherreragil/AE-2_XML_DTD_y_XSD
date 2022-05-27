@@ -1,0 +1,9 @@
+<!-- 
+**************************************** 
+  Definición de elementos y atributos 
+**************************************** 
+-->
+<!-- Biblioteca -->
+<!ELEMENT biblioteca (documentos)>
+<!-- Documentos -->
+<!ELEMENT documentos (libro*, revista*, periodico*)>
