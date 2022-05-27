@@ -142,4 +142,22 @@
             </secciones_revista>
         </revista>
 
+        <!-- investigacion -->
+        <revista id="R0004" tipo_clase="investigacion" num_paginas_revista="150">
+            <titulo_revista>Investigación y ciencia</titulo_revista>
+            <num_revista>Nº405</num_revista>
+            <indice_revista>Indice revista</indice_revista>
+            <secciones_revista>
+                <seccion_revista num_paginas_seccion="50">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="50">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+                <seccion_revista num_paginas_seccion="50">
+                    <contenido_seccion enlace_contenido="link" />
+                </seccion_revista>
+            </secciones_revista>
+        </revista>
+
 </biblioteca>
