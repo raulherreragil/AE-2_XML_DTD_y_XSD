@@ -128,4 +128,86 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Periódico -->
+    <xs:element name="periodico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="secciones_periodico" />
+                <xs:element name="indice_periodico" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="id">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[P][0-9]{4}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="tipo_clase">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="nacional"></xs:enumeration>
+                        <xs:enumeration value="internacional"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="fecha_publicacion">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{2}[/]\d{2}[/]\d{4}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="secciones_periodico">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="seccion_periodico" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="seccion_periodico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="articulos_periodico" />
+            </xs:sequence>
+            <xs:attribute name="tipo_seccion">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="economica"></xs:enumeration>
+                        <xs:enumeration value="opinion"></xs:enumeration>
+                        <xs:enumeration value="deportes"></xs:enumeration>
+                        <xs:enumeration value="nacional"></xs:enumeration>
+                        <xs:enumeration value="internacional"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="articulos_periodico">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="art_periodico" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="art_periodico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="contenido_art" />
+            </xs:sequence>
+            <xs:attribute name="autor" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contenido_art">
+        <xs:complexType>
+            <xs:attribute name="enlace_art" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
